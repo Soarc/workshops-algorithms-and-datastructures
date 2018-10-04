@@ -6,9 +6,10 @@ namespace Soarc.Workshops.AlgorithmsAndDatastructures
 {
     class Program
     {
-        const int DATA_LENGHT = 100000;
+        const int DATA_LENGHT = 100000000;
         async static Task Main(string[] args)
         {
+            GraphAlgorithms.Run();
             Console.WriteLine($"Starting test Quick sort VS Bubble sort for {DATA_LENGHT} element array.");
 
             var random = new Random();
@@ -34,7 +35,7 @@ namespace Soarc.Workshops.AlgorithmsAndDatastructures
             {
                 Console.WriteLine("Bubble sort testing started.");
                 sw2.Start();
-                BubbleSort.DoSort(data2);
+                //BubbleSort.DoSort(data2);
                 sw2.Stop();
                 Console.WriteLine($"Bubble sort done: {sw2.ElapsedMilliseconds} milliseconds elapsed.");
             });
@@ -73,6 +74,7 @@ namespace Soarc.Workshops.AlgorithmsAndDatastructures
             Console.WriteLine("Bubble sort is OK.");
             Console.WriteLine($"Checking done in {sw3.ElapsedMilliseconds} milliseconds.");
             Console.WriteLine("Testing done.");
+
             Console.ReadLine();
         }
     }
